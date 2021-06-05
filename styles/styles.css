@@ -1,0 +1,188 @@
+/* details
+
+-------------------------*/
+
+/* Color Palette
+Green-ish:
+RGB: 10-54-65
+HEX: #0A3641
+-
+White-ish:
+RGB: 248-248-248
+HEX: #F8F8F8
+-
+Purple-ish:
+RGB: 140-35-72
+HEX: #8C2348
+-
+Grey-ish:
+RGB: 26-26-26
+HEX: #1A1A1A
+-
+Yellow-ish:
+RGB: 140-130-14
+HEX: #8C820E
+-------------------------*/
+/*---------- Border Box Fix ----------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*---------- Global styles ----------*/
+body {
+  background-image: url(/images/raindrops.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 2560px 1440px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+img {
+  background-color: #f8f8f8;
+}
+
+/*---------- Header ----------*/
+header {
+  background-color: #f8f8f8;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgba(10, 54, 65, 1);
+  padding-top: 10px;
+  height: 140px;
+}
+
+/* Did not find out how i could fix the whole header, so the content scrolls under it -->
+.fixed-header {
+}
+
+.header-container {
+} <--------------------------------------------------------------------------------------*/
+
+/* Header top */
+.header-top {
+  background-color: #f8f8f8;
+  max-width: 1370px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header-logo {
+  width: 30%;
+  float: left;
+}
+
+.header-icons {
+  width: 70%;
+  float: left;
+}
+
+.icons-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+.icons-nav li {
+  float: left;
+  padding-left: 25px;
+}
+
+/* Header bottom (nav) */
+.header-bottom {
+  background-color: #0a3641;
+  overflow: hidden;
+}
+
+.main-nav {
+  max-width: 1370px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main-nav ul {
+  background-color: #0a3641;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  float: left;
+}
+
+.main-nav li {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li a {
+  background-color: #0a3641;
+  display: block;
+  color: #f8f8f8;
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.main-nav li a:hover {
+  background-color: #f8f8f8;
+  color: #0a3641;
+  border-bottom-right-radius: 10px;
+  font-weight: bold;
+}
+
+/*---------- Footer ----------*/
+footer {
+  color: #f8f8f8;
+  text-align: center;
+}
+
+.footer-container {
+  background-color: #0a3641;
+  max-width: 1370px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px;
+}
+
+/*---------- Main ----------*/
+main {
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  max-width: 1370px;
+}
+
+.main-container {
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.advertising {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1370px;
+  overflow: hidden;
+}
+
+.adv-box {
+  width: 33.33333%;
+}
+
+.brandadjectives {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1370px;
+  overflow: hidden;
+}
+
+.badj-box {
+  padding: 33px;
+}
