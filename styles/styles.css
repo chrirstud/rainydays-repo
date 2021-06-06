@@ -65,6 +65,8 @@ p {
   display: block;
   box-shadow: 0 2px 4px 0 rgba(10, 54, 65, 1);
   height: 150px;
+  min-width: 100%;
+  position: fixed;
 }
 
 .header-top img {
@@ -75,20 +77,20 @@ p {
 
 .header-bottom {
   background-color: #0a3641;
-  overflow: ;
+  overflow: hidden;
   height: 40px;
 }
 
 ul.header-icons {
   list-style-type: none;
-  padding 0px;
+  padding: 5px;
   float: right;
   margin: 0 auto;
 }
 
 li.header-icons {
   float: left;
-  padding: 10px;
+  padding: 5px;
   margin: 0;
 }
 
@@ -102,14 +104,16 @@ nav ul {
   list-style-type: none;
   padding: 0px;
   float: left;
-  margin: 0 auto;
+  margin-top: 40px;
   border-bottom-right-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(10, 54, 65, 1);
+  position: absolute;
 }
 
 nav li {
   float: left;
-  margin: 0 auto;
+  margin: 0px auto;
+  text-align: center;
 }
 
 nav a {
@@ -147,44 +151,159 @@ nav a.current-page {
 }
 
 /*---------- Footer ----------*/
+footer {
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  background-color: #0a3641;
+  padding: 25px;
+  color: #f8f8f8;
+  text-align: center;
+  float: left;
+  min-width: 100%;
+  max-width: 100%;
+}
 
 /*---------- Main ----------*/
-main {
-  height: 500px;
+.main-wrapper {
+  max-width: 100%;
+  padding-top: 150px;
+  display: block;
+  max-height: 100%;
+}
+
+.brandphoto {
+  float: left;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.brandadjective {
+  float: left;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.brandphoto img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  float: left;
+}
+
+.brandadjective img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  float: left;
+  padding: 10px;
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-  body {
-    background-color: red;
-  }
+@media (max-width: 600px) {
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 601px) and (max-width: 1279px) {
   body {
-    background-color: yellow;
+    background-image: url(/images/raindrops.jpeg);
+    background-size: 100% 100%;
   }
-
-  .hamburger-label{
+  .hamburger-label {
     display: none;
   }
-  
-  nav{
-    display: inline-block;
-  }
-}
 
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: blue;
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    margin-top: 0px;
+  }
+
+  .main-wrapper {
+    background-color: #f8f8f8;
+    float: left;
+    margin: 0 auto;
+  }
+
+  .brandphoto {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .brandadjective {
+    float: left;
+    max-width: 100%;
+    margin: 10%;
+    align-content: center;
+  }
+
+  .brandphoto img {
+    max-width: 33.333%;
+    margin: 0 auto;
+    float: left;
+  }
+
+  .brandadjective img {
+    max-width: 33%;
+    max-height: 100%;
+    margin: 0 auto;
+    float: left;
+    padding: 0px 10px 0px 10px;
   }
 }
 
 /* Media Query for Large screens */
 @media (min-width: 1280px) {
   body {
-    background-color: green;
+    background-image: url(/images/raindrops.jpeg);
+    background-size: 100% 100%;
+
+    background-attachment: fixed;
+    margin: 0 auto;
+  }
+
+  header,
+  main,
+  footer {
+    width: 1280px;
+    float: center;
+    margin: 0 auto;
+  }
+
+  .header-wrapper {
+    min-width: 1280px;
+  }
+
+  .hamburger-label {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    margin-top: 0px;
+  }
+
+  .main-wrapper {
+    background-color: #f8f8f8;
+    float: left;
+  }
+
+  .brandadjective {
+    margin: 10%;
+  }
+
+  .brandphoto img {
+    max-width: 33.333%;
+  }
+
+  .brandadjective img {
+    max-width: 33.333%;
   }
 }
