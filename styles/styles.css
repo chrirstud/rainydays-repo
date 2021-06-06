@@ -23,6 +23,7 @@ Yellow-ish:
 RGB: 140-130-14
 HEX: #8C820E
 -------------------------*/
+
 /*---------- Border Box Fix ----------*/
 html {
   box-sizing: border-box;
@@ -32,157 +33,158 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 /*---------- Global styles ----------*/
 body {
-  background-image: url(/images/raindrops.jpeg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 2560px 1440px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
 }
 
-img {
-  background-color: #f8f8f8;
+h1,
+h2,
+p {
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 25px;
 }
 
 /*---------- Header ----------*/
-header {
+.header-wrapper {
   background-color: #f8f8f8;
-  overflow: hidden;
-  box-shadow: 0 2px 4px 0 rgba(10, 54, 65, 1);
-  padding-top: 10px;
-  height: 140px;
-}
-
-/* Did not find out how i could fix the whole header, so the content scrolls under it -->
-.fixed-header {
-}
-
-.header-container {
-} <--------------------------------------------------------------------------------------*/
-
-/* Header top */
-.header-top {
-  background-color: #f8f8f8;
-  max-width: 1370px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.header-logo {
-  width: 30%;
-  float: left;
-}
-
-.header-icons {
-  width: 70%;
-  float: left;
-}
-
-.icons-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  float: right;
-}
-
-.icons-nav li {
-  float: left;
-  padding-left: 25px;
-}
-
-/* Header bottom (nav) */
-.header-bottom {
-  background-color: #0a3641;
-  overflow: hidden;
-}
-
-.main-nav {
-  max-width: 1370px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.main-nav ul {
-  background-color: #0a3641;
-  margin: 0 auto;
-  list-style-type: none;
-  padding: 0;
-  float: left;
-}
-
-.main-nav li {
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-.main-nav li a {
-  background-color: #0a3641;
   display: block;
-  color: #f8f8f8;
-  text-align: center;
-  width: 150px;
-  text-decoration: none;
-  margin: 0;
+  box-shadow: 0 2px 4px 0 rgba(10, 54, 65, 1);
+  height: 150px;
+}
+
+.header-top img {
+  display: block;
+  margin: 0 auto;
   padding: 10px;
 }
 
-.main-nav li a:hover {
+.header-bottom {
+  background-color: #0a3641;
+  overflow: ;
+  height: 40px;
+}
+
+ul.header-icons {
+  list-style-type: none;
+  padding 0px;
+  float: right;
+  margin: 0 auto;
+}
+
+li.header-icons {
+  float: left;
+  padding: 10px;
+  margin: 0;
+}
+
+nav,
+#hamburger-menu {
+  display: none;
+}
+
+nav ul {
+  background-color: #0a3641;
+  list-style-type: none;
+  padding: 0px;
+  float: left;
+  margin: 0 auto;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(10, 54, 65, 1);
+}
+
+nav li {
+  float: left;
+  margin: 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f8f8f8;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+nav a:hover {
   background-color: #f8f8f8;
   color: #0a3641;
   border-bottom-right-radius: 10px;
   font-weight: bold;
 }
 
-/*---------- Footer ----------*/
-footer {
-  color: #f8f8f8;
-  text-align: center;
+nav a.current-page {
+  background-color: #f8f8f8;
+  color: #0a3641;
+  border-bottom-right-radius: 10px;
+  font-weight: bold;
 }
 
-.footer-container {
-  background-color: #0a3641;
-  max-width: 1370px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 15px;
+.hamburger-label {
+  float: left;
+  color: #f8f8f8;
+  padding: 3px 3px 3px 6px;
+  font-size: 1.5em;
+  display: block;
 }
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+/*---------- Footer ----------*/
 
 /*---------- Main ----------*/
 main {
-  background-color: #f8f8f8;
-  margin: 0 auto;
-  max-width: 1370px;
+  height: 500px;
 }
 
-.main-container {
-  background-color: #f8f8f8;
-  margin: 0 auto;
-  overflow: hidden;
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  body {
+    background-color: red;
+  }
 }
 
-.advertising {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1370px;
-  overflow: hidden;
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    background-color: yellow;
+  }
+
+  .hamburger-label{
+    display: none;
+  }
+  
+  nav{
+    display: inline-block;
+  }
 }
 
-.adv-box {
-  width: 33.33333%;
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: blue;
+  }
 }
 
-.brandadjectives {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1370px;
-  overflow: hidden;
-}
-
-.badj-box {
-  padding: 33px;
+/* Media Query for Large screens */
+@media (min-width: 1280px) {
+  body {
+    background-color: green;
+  }
 }
